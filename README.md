@@ -1,4 +1,4 @@
-# Exemplo_relogio_react
+# Exemplo relogio react
 Projeto exemplo de relógio usando React para ilustrar o ciclo de vida de um componente
 
 ## Roteiro de aula
@@ -32,6 +32,7 @@ Passo a passo de construção e explicação da aula sobre ciclo de vida
     return <h2>Horário Atual: {props.date.toLocaleTimeString()}</h2>
     };
     ```
+    
 ### 4. Definir a class Clock
 
 - Definir a class Clock com o construtor
@@ -43,11 +44,11 @@ class Clock extends React.Component{
     // Define o estado date pegando a data atual
     this.state = {date: new Date()};
   }
-  ```
+```
   
 - Definir dentro da class Clock os ciclos de vida ``componentDidMount()`` e ``componentWillUnmount()`` porém sem conteúdo
   
-  ```js
+```js
   class Clock extends React.Component{
   constructor(props){
     super(props);
@@ -56,15 +57,13 @@ class Clock extends React.Component{
   }
 
   // Ciclo de vida que ocorre quando Clock é inserida no DOM
-  // Através do setInterval, o relógio é criado (com um timerID atrelado)
-  // Chama a função thick a cada 1000 ms (1s)
   componentDidMount(){
   }
 
   // Ciclo de vida que ocorre quando o componente é removido do DOM
   // Quando isso ocorre, a função clearInterval limpa o relógio criado pelo setInterval
   componentWillUnmount(){  
-  }
+  }```
   
 - Definir a função ``thick()`` responsável por atualizar o estado date, logo abaixo dos ciclos de vida e dentro da class Clock
 
@@ -75,7 +74,7 @@ class Clock extends React.Component{
       date: new Date()
     });
   }
-  ```
+```
   
  - Definir o ``render()`` da class Clock logo em seguida
  
