@@ -92,22 +92,22 @@ Passo a passo de construção e explicação da aula sobre ciclo de vida
     }
     ```
   
-### 5. Chamar dois relógios dentro da tag ```<header>``` da função ```App()``` que será invocada no ``index.js``
+### 5. Chamar dois relógios dentro da tag ```<header>``` da função ```App()``` que será invocada no ``index.js`` da raíz
 
-    ```js
-    // Função principal invocada no index.js
-    function App() {
-      return (
-        <div className="App">
-          <header className="App-header">
-            {/* Faz a chamada de dois relógios, para mostrar a independência destes */}
+```js
+// Função principal invocada no index.js
+function App() {
+return (
+    <div className="App">
+        <header className="App-header">
+        {/* Faz a chamada de dois relógios, para mostrar a independência destes */}
             <Clock />
             <Clock />
-          </header>
-        </div>
-      );
-    }
-    ```
+        </header>
+    </div>
+    );
+}
+```
 
 - Neste momento, mostrar que os relógios estão parados
 
@@ -115,19 +115,19 @@ O componente foi renderizado, porém a função ``thick()`` não foi invocada, p
 
 ### 6. Dentro da função ``componentDidMount()``, criar efetivamente a chamada de incremento dos relógios através da função ``setInterval()`` e mostrar seus IDs através do ``console.log`` para verificar que são diferentes
 
-    ```js
-    // Ciclo de vida que ocorre quando Clock é inserida no DOM
-      // Através do setInterval, o relógio é criado (com um timerID atrelado)
-      // Chama a função thick a cada 1000 ms (1s)
-      componentDidMount(){
-        this.timerID = setInterval(() => {
-          this.thick()
-        }, 1000);
+```js
+// Ciclo de vida que ocorre quando Clock é inserida no DOM
+  // Através do setInterval, o relógio é criado (com um timerID atrelado)
+  // Chama a função thick a cada 1000 ms (1s)
+  componentDidMount(){
+    this.timerID = setInterval(() => {
+      this.thick()
+    }, 1000);
 
-        // Exibe no console o ID de cada relógio
-        console.log("Eu sou o relógio " + this.timerID)
-      }
-    ```
+    // Exibe no console o ID de cada relógio
+    console.log("Eu sou o relógio " + this.timerID)
+  }
+```
 
 - Explicar o funcionamento deste ciclo de vida
 
@@ -138,11 +138,11 @@ A função componentDidMount() só é executada uma vez, logo o console.log() s�
 
 ### 7. Dentro da função ``componentWillUnmount()``, utilizar a função ``clearInterval()`` para limpar o relógio
 
-    ```js
-    componentWillUnmount(){
-        clearInterval(this.timerID);
-      }
-    ```
+```js
+componentWillUnmount(){
+    clearInterval(this.timerID);
+  }
+```
 
 - Explicar o funcionamento deste ciclo de vida
 
