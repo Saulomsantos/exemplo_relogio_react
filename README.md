@@ -133,7 +133,9 @@ O componente foi renderizado, porém a função ``thick()`` não foi invocada, p
 
 Quando a class Clock é inserida no DOM, tudo que está dentro da função é executado
 
-A função componentDidMount() só é executada uma vez, logo o console.log() só é executada também uma vez. Porém, a função setInterval() ocorre a cada 1s infinitamente e, consequentemente, a função thick() é invocada também a cada 1s, ilustrando o funcionamento de um relógio
+A função componentDidMount() só é executada uma vez, logo o console.log() só é executado também uma vez
+
+Porém, a função setInterval() ocorre a cada 1s infinitamente e, consequentemente, a função thick() é invocada também a cada 1s, ilustrando o funcionamento de um relógio
 
 
 ### 7. Dentro da função ``componentWillUnmount()``, utilizar a função ``clearInterval()`` para limpar o relógio
