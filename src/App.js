@@ -25,7 +25,7 @@ class Clock extends React.Component{
     }, 1000);
 
     // Exibe no console o ID de cada relógio
-    console.log(this.timerID)
+    console.log("Eu sou o relógio " + this.timerID)
   }
 
   // Ciclo de vida que ocorre quando o componente é removido do DOM
