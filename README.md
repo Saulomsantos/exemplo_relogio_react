@@ -27,70 +27,70 @@ Passo a passo de construção e explicação da aula sobre ciclo de vida
 
 - Abaixo dos imports, definir a função ``DataFromatada()``
     
-    ```js
-    function DataFormatada(props){
-        return <h2>Horário Atual: {props.date.toLocaleTimeString()}</h2>
-    };
-    ```
+```js
+function DataFormatada(props){
+    return <h2>Horário Atual: {props.date.toLocaleTimeString()}</h2>
+};
+```
     
 ### 4. Definir a class Clock
 
 - Definir a class Clock com o construtor
 
-    ```js
-    class Clock extends React.Component{
-        constructor(props){
-            super(props);
-            // Define o estado date pegando a data atual
-            this.state = {date: new Date()};
-    }
-    ```
+```js
+class Clock extends React.Component{
+    constructor(props){
+        super(props);
+        // Define o estado date pegando a data atual
+        this.state = {date: new Date()};
+}
+```
   
 - Definir dentro da class Clock os ciclos de vida ``componentDidMount()`` e ``componentWillUnmount()`` porém sem conteúdo
   
-    ```js
-    class Clock extends React.Component{
-        constructor(props){
-            super(props);
-            // Define o estado da data pegando a data atual
-            this.state = {date: new Date()};
-        }
+```js
+class Clock extends React.Component{
+    constructor(props){
+        super(props);
+        // Define o estado da data pegando a data atual
+        this.state = {date: new Date()};
+    }
 
-        // Ciclo de vida que ocorre quando Clock é inserida no DOM
-        componentDidMount(){
-        }
+    // Ciclo de vida que ocorre quando Clock é inserida no DOM
+    componentDidMount(){
+    }
 
-        // Ciclo de vida que ocorre quando o componente é removido do DOM
-        // Quando isso ocorre, a função clearInterval limpa o relógio criado pelo setInterval
-        componentWillUnmount(){  
-        }
-    ```
+    // Ciclo de vida que ocorre quando o componente é removido do DOM
+    // Quando isso ocorre, a função clearInterval limpa o relógio criado pelo setInterval
+    componentWillUnmount(){  
+    }
+```
   
 - Definir a função ``thick()`` responsável por atualizar o estado date, logo abaixo dos ciclos de vida e dentro da class Clock
 
-    ```js
-    // Define no state date a data atual a cada vez que é chamada
-      thick(){
-        this.setState({
-          date: new Date()
-        });
-      }
-    ```
+```js
+// Define no state date a data atual a cada vez que é chamada
+  thick(){
+    this.setState({
+      date: new Date()
+    });
+  }
+```
   
  - Definir o ``render()`` da class Clock logo em seguida
  
-    ```js
-    // Renderiza na tela o título e a função DataFormatada, passando date com o valor atual do state
-     render(){
-       return(
-         <div>
-           <h1>Relógio</h1>
-           <DataFormatada date={this.state.date} />
-         </div>
-       )
-     }
-    }
-    ```
+```js
+// Renderiza na tela o título e a função DataFormatada, passando date com o valor atual do state
+ render(){
+   return(
+     <div>
+       <h1>Relógio</h1>
+       <DataFormatada date={this.state.date} />
+     </div>
+   )
+ }
+}
+```
   
 ### 5. Chamar dois relógios dentro da tag ```<header>``` da função ```App()``` que será invocada no ``index.js`` da raíz
 
@@ -116,7 +116,7 @@ O componente foi renderizado, porém a função ``thick()`` não foi invocada, p
 ### 6. Dentro da função ``componentDidMount()``, criar efetivamente a chamada de incremento dos relógios através da função ``setInterval()`` e mostrar seus IDs através do ``console.log`` para verificar que são diferentes
 
 ```js
-// Ciclo de vida que ocorre quando Clock é inserida no DOM
+  // Ciclo de vida que ocorre quando Clock é inserida no DOM
   // Através do setInterval, o relógio é criado (com um timerID atrelado)
   // Chama a função thick a cada 1000 ms (1s)
   componentDidMount(){
