@@ -151,3 +151,24 @@ componentWillUnmount(){
 Quando a class Clock é removida do DOM, tudo que está dentro da função é executado
 
 
+### 8. Proposta de desafio
+
+- Propor o escopo do desafio
+
+#### 8.1 Implementar um botão "Pausar relógio" que, ao ser clicado, irá pausar o relógio
+
+##### 8.1.1 Exibir no console a mensagem "Relógio x pausado!", onde x é o identificador do relógio
+
+#### 8.2 Implementar um botão "Retomar relógio" que, ao ser clicado, irá fazer o relógio voltar a funcionar
+
+##### 8.2.1 Exibir no console a mensagem "Relógio retomado!"
+
+##### 8.2.2 Exibir no console a mensagem "Agora eu sou o relógio y", onde y é o identificador do relógio
+
+> #### 8.3 Extra - Estilizar os botões para que fiquem da seguinte forma:
+
+> ##### 8.3.1 Ambos botões devem ter cor da fonte White, altura de 25px e fontWeight de 600
+
+> ##### 8.3.2 Adicionar um espaçamento entre os botões de 20px
+
+> ##### 8.3.3 O botão Pausar deverá ter a cor de fundo vermelha e o botão Retomar deverá ter a cor de fundo verde
