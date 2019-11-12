@@ -46,9 +46,12 @@ class Clock extends React.Component{
 }
 ```
   
-Neste ponto, explicar o state. 
+Neste ponto, explicar o state.
+
 State é o estado onde os atributos da classe são declarados com o valor inicial e que serão utilizados posteriormente
+
 O super(props) refere-se ao construtor da classe pai e é ele que permite o uso do this
+
 O uso de props é para que o this seja capaz de referenciar propriedades da classe, por exemplo, o state
 
 - Definir dentro da class Clock os ciclos de vida ``componentDidMount()`` e ``componentWillUnmount()`` porém sem conteúdo
